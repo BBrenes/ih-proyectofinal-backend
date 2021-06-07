@@ -5,6 +5,7 @@ const {check, validationResult} = require('express-validator')
 const usuarioController = require("./../controllers/usuarioController")
 
 //Rutas
+///api/usuarios
 //Crear un usuario
 router.post('/',
     [

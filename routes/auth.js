@@ -7,7 +7,7 @@ const auth = require('./../middleware/auth')
 
 //Iniciar sesion
 //api/auth
-//El no ha iniciado sesión y viene por su token
+//El usuario no ha iniciado sesión y viene por su token
 router.post("/", [
     check("email", "Agrega un email válido.").isEmail(),
     check("password", "El password debe ser mínimo de 6 caracteres.").isLength({min:6})

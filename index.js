@@ -6,6 +6,8 @@ const app = express()
 const userRoutes = require('./routes/usuarios')
 const authRoutes = require('./routes/auth')
 const projectsRoutes = require('./routes/proyectos')
+const adminGatosRoutes = require('./routes/adminGatos')
+const usuarioGatosRoutes = require('./routes/usuarioGatos')
 require('dotenv').config({
     path: '.env'
 })
@@ -25,6 +27,10 @@ require('dotenv').config({
     app.use('/api/auth', authRoutes)
     //Proyectos
     app.use('/api/proyectos', projectsRoutes)
+    //AdminGatos
+    app.use('/api/admingatos', adminGatosRoutes)
+    //UsuarioGatos
+    app.use('/api/usuariogatos', usuarioGatosRoutes)
 
     app.get("/", (req, res) =>{
         res.send("Hola Mundo")

@@ -1,5 +1,6 @@
 //Importaciones
 const mongoose = require('mongoose')
+const { Schema } = require('mongoose')
 
 //Schema
 const UsuarioSchema = mongoose.Schema({
@@ -15,7 +16,27 @@ const UsuarioSchema = mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    rol: {
+        type: String,
+        enum: ['admin', 'user'],
+        default: 'user'
+    },
+    nombreCompleto: {
+        type: String,
+    },
+    direccion: {
+        type: String,
+    },
+    telefono: {
+        type: String,
+    },
+    perfilCompleto: {
+        type: Boolean,
+        default: false
+    },
+    favoritos: 
+        [{ type: Schema.Types.ObjectId, ref: 'Gato' }]
 }, {
     timestamps: true
 })
