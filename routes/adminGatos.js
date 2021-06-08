@@ -47,8 +47,7 @@ router.put("/:id", auth, authAdmin,
 
 //Ruta5
 //Borrar un gato
-router.delete("/:id", authAdmin,
-    auth,
+router.delete("/:id", auth, authAdmin,
     adminGatoController.eliminarGato
 )
 
