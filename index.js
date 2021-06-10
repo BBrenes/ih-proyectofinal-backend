@@ -37,6 +37,6 @@ require('dotenv').config({
     })
 
 //Servidor
-app.listen(4000, () => {
+app.listen(process.env.PORT, () => {
     console.log("El servidor está corriendo en el puerto 4000")
 })

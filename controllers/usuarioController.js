@@ -12,7 +12,7 @@ exports.crearUsuario = async (req, res) => {
     });
   }
   //Extraer nombre, email y password del req
-  const {email, password, nombre} = req.body
+  const {email, password} = req.body
 
   //Buscar en base de datos si existe el usuario
   try{
