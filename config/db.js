@@ -2,7 +2,7 @@ const moongose = require('mongoose')
 
 const conectarDB = async () => {
     try{
-        await moongose.connect(`mongodb://localhost:27017/tareasih`, {
+        await moongose.connect(process.env.MONGODB_URL || `mongodb://localhost:27017/tareasih`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false
