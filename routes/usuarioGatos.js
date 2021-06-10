@@ -9,7 +9,7 @@ const usuarioGatoController = require("../controllers/usuarioGatoController")
 
 //Ruta1
 //Leer/Obtener todos los gatos
-router.get("/", auth,
+router.get("/",
     usuarioGatoController.obtenerGatos
 )
 
