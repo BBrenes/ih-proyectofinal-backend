@@ -12,7 +12,7 @@ require('dotenv').config({
     path: '.env'
 })
 
-//Middlewares ---
+//Middlewares 
     //Conectar a la BD
     conectarDB()
     //Habilitar cruce de datos entre dos ambientes NodeJS (cors)
